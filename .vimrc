@@ -14,7 +14,8 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'            " Project and file navigation
+Plugin 'majutsushi/tagbar'              " Class/module browser
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
@@ -89,3 +90,13 @@ set laststatus=2
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" NerdTree настройки
+" показать NERDTree на F3
+map <F3> :NERDTreeToggle<CR>
+"игноррируемые файлы с расширениями
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']  
+
+" TagBar настройки
+map <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 0 " автофокус на Tagbar при открытии
